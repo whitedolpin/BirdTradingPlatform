@@ -1,4 +1,3 @@
-# BirdTradingPlatform
 # Welcome to BirdTradingPlatform Repository
 
 ### You will find in this respo these following stuff:
