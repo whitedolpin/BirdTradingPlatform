@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>AdminDashboardController</servlet-name>
+        <servlet-class>com.birdtradingplatform.admin.controller.AdminDashboardController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AccountManageController</servlet-name>
+        <servlet-class>com.birdtradingplatform.admin.controller.AccountManageController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminProductController</servlet-name>
+        <servlet-class>com.birdtradingplatform.admin.controller.AdminProductController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteAccountController</servlet-name>
+        <servlet-class>com.birdtradingplatform.admin.controller.DeleteAccountController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDashboardController</servlet-name>
+        <url-pattern>/AdminDashboardController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountManageController</servlet-name>
+        <url-pattern>/AccountManageController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminProductController</servlet-name>
+        <url-pattern>/AdminProductController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAccountController</servlet-name>
+        <url-pattern>/DeleteAccountController</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+           GetDataForHomepage
+        </welcome-file>
+    </welcome-file-list>
+</web-app>
