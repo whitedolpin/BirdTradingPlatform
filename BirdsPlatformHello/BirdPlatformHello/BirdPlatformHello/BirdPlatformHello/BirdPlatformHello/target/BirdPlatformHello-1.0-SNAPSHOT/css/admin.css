@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+  .text-right {
+    text-align: right !important;
+  }
+    .text-left {
+    text-align: left !important;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+.col-10{
+    width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main";
+    height: 100vh;
+}
+.header {
+    grid-area: header;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+#sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: #ac8576;
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+}
+/* ---
+body {
+    background-color: #faf8f6;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #eae0dc;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #b58d7e;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #b58d7e, #845f51);
+    color: #faf7f6;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #945f51, #b58d7e);
+}
+
+/* header section start */
+
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+    .home {
+        padding: 3rem 2rem;
+    }
+    .home #slide-next,
+    .home #slide-prev {
+        top: 95%;
+    }
+    .home #slide-prev {
+        left: auto;
+        right: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #search-btn {
+        display: inline-block;
+    }
+    .header .search-form {
+        position: absolute;
+        height: 8rem;
+        top: -101%;
+        left: 2%;
+        right: 2.2%;
+        /* width: 100%; */
+        border-radius: 3rem 3rem 0.75rem 0.75rem;
+        background: #ece0dc;
+    }
+    .header .search-form.active {
+        top: 110%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .home .slides-container .slide .content h3 {
+        font-size: 4rem;
+    }
+    .heading {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        gap: 1rem;
+    }
+}
+
+
+.container{
+    background-color: #eae0dc;
+    padding: 30px;
+    border-radius: 16px;
+    background-color:(0,0,0,0.08) 0px 4px 12px;
+}
+
+/* footer start */
+
+.avt-dropdown img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#menu{
+    float: right;
+}
+
+.dropdown .dropdown-item{
+    font-size: larger;
+    padding: 10px;
+}
+
+.dropdown .dropdown-item{
+    width: 120px;
+}
+
+.dropdown-item svg{
+    margin-right: 5%;
+}
+
+.sidebar{
+    margin: 20px 0px 0px 20px;
+    font-size: medium;
+}
+
+.col-md-2#side{
+    border-right: 1px solid #888;
+}
+
+@media screen and (min-width: 1000px) {
+    .sidebar{
+        position: relative;
+        top: 30px;
+        left: -10px;
+    }
+}
+
+ul.sidebar li{
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+
+ul.sidebar li a{
+    text-decoration-line: none;
+    text-decoration: none;
+    font-size: x-large;
+    color: #000;
+    font-weight: 400;
+}
+
+ul.sidebar li a:hover{
+    color: #ff1616;
+}
+
+
+.chart-container{
+    width: 100%;
+    background-color: rgb(244, 244, 244);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 5px 40px #888888;
+    font-weight: 300;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 991px){
+    .chart-container{
+        margin-top: 50px;
+    }
+}
+
+.chart-container h4,p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.circle-head{
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.circle-head svg{
+    color: #ffffff;
+}
+
+.chart-container#big-chart{
+    text-align: center;
+    padding: 10px 50px 20px 50px;
+}
+
+.chart-container#big-chart h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-container#big-chart canvas{
+    height: 500px;
+}
+
+body.db-shop{
+    background-color: #f0e8e4;
+}
+
+
+
+.product-box{
+    background-color: #fff;
+    padding: 3%;
+}
+
+#product-search{
+    float: right;
+    font-size: 15px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+
+#product-search input{
+    padding: 5px;
+    background-color: #e4e4e4;
+}
+
+#product-search button{
+    padding: 5px;
+    background-color: #14181b;
+    color: #fff;
+}
+
+.list{
+    margin-top: 4%;
+    font-size: large;
+    background-color: #fff;
+}
+
+.list tr th{
+    text-align: center;
+    padding: 2%;
+}
+
+.list tr td{
+    padding: 2%;
+    max-width: 200px;
+}
+
+.list tr td img{
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+#main h3{
+    margin-bottom: 2%;
+    color: #000;
+}
+
+td select option{
+    font-size: medium;
+}
+
+@media screen and (max-width: 991px){
+    .list{
+        font-size: small;
+    }
+}
+
+.chart-container.shop-info{
+    justify-content: center;
+}
+
+.chart-container.shop-info img{
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-info{
+    text-align: center;
+}
+
+.col-6.shop-info p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    color: red;
+}
+
+
+.AddFBform{
+    background-color: white;
+    position: fixed;
+    top:30%;
+    left:30%;
+    width: 40%;
+    border: 1px solid black;
+    padding: 20px;
+    display: none;
+    border-radius: 5px;
+}
+.AddFBform .Buton{
+    background-color: #e69476;
+    color:white ;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 50px;
+    margin-top: 10px;
+}
